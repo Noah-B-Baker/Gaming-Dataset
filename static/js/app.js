@@ -49,3 +49,24 @@ d3.selectAll("#filter-btn").on("click", handleClick);
 
 // Build the table when the page loads
 buildTable(tableData);
+// https://github.com/Zernach/Plotly_D3_Data_Visualizations
+// // FUNCTION #3 of 4
+// function optionChanged(UID) {
+//     buildCharts(UID);
+//     populateDemoInfo(UID);
+// }
+
+// // FUNCTION #4 of 4
+// function initDashboard() {
+//     var dropdown = d3.select("#selDataset")
+//     d3.json("samples.json").then(data => {
+//         var names = data.names;
+//         names.forEach(UID => {
+//             dropdown.append("option").text(UID).property("value", UID)
+//         })
+//         buildCharts(names[0]);
+//         populateDemoInfo(names[0]);
+//     });
+// };
+
+// initDashboard();
