@@ -1,3 +1,8 @@
+const developperURL = "ttps://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/developper.csv?raw=true"
+const plateformURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/plateform.csv?raw=true"
+const publisherURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/publisher.csv?raw=true"
+const vgsalesURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/vgsales.csv?raw=true"
+
 // from data.js
 const tableData = data;
 
@@ -10,7 +15,7 @@ function buildTable(data) {
 
   // Next, loop through each object in the data
   // and append a row and cells for each value in the row
-  data.forEach((dataRow) => {
+  d3.csv(developperURL).forEach((dataRow) => {
     // Append a row to the table body
     const row = tbody.append("tr");
 
