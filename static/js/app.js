@@ -1,7 +1,7 @@
 const developperURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/developper.csv?raw=true";
 const plateformURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/plateform.csv?raw=true";
 const publisherURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/publisher.csv?raw=true";
-const vgsalesURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/vgsales.csv?raw=true";
+const vgsalesURL = "s";
 const currentURL = vgsalesURL;
 
 // from data.js
@@ -56,15 +56,15 @@ d3.selectAll("#filter-btn").on("click", handleClick);
 // Build the table when the page loads
 // buildTable(tableData);
 
-d3.csv(currentURL).then(function (devData) {
-  console.log(devData)
-  buildTable(devData);
-});
+
 
 
 // // FUNCTION #3 of 4
 function optionChanged(option) {
-  buildTable(option);
+  d3.csv(option).then(function (devData) {
+    console.log(devData)
+    buildTable(devData);
+  });
 }
 
 // // FUNCTION #4 of 4

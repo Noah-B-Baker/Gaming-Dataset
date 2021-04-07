@@ -23,31 +23,31 @@
     </nav>
     <div class="hero text-center">
       <h1>Game Data</h1>
-      <p>The Truth is Out There</p>
+      <p>Datasets courtesy of Kaggle</p>
     </div>
     <div class="container">
       <div class="row margin-top-50">
         <div class="col-md-2">
           <aside class="filters">
-            <div class="panel panel-default">
-              <div class="panel-heading">Filter Search</div>
+            <div class="panel panel-default">        
               <div class="panel-body">
                 <form>
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <select id="selDataset" onchange="optionChanged(this.value)">
-                        <option value="940">940</option>
-                        <option value="941">941</option>
-                        <option value="940">940</option>
-                        <option value="941">941</option>
+                        <option value="">Select Data</option>
+                        <option value="https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/developper.csv?raw=true">Developers</option>
+                        <option value="https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/plateform.csv?raw=true">Platforms</option>
+                        <option value="https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/publisher.csv?raw=true">Publishers</option>
+                        <option value="https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/vgsales.csv?raw=true">Sales</option>
                       </select>
                       <li class="filter list-group-item">
-                        <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                        <!-- <label for="date">Enter a Date</label>
+                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011"> -->
                       </li>
                     </ul>
                   </div>
-                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                  <!-- <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button> -->
                 </form>
               </div>
             </div>
@@ -58,13 +58,13 @@
             <table id="ufo-table" class="table table-striped">
               <thead>
                 <tr>
-                  <th class="table-head">Date</th>
+                  <!-- <th class="table-head">Date</th>
                   <th class="table-head">City</th>
                   <th class="table-head">State</th>
                   <th class="table-head">Country</th>
                   <th class="table-head">Shape</th>
                   <th class="table-head">Duration</th>
-                  <th class="table-head">Comments</th>
+                  <th class="table-head">Comments</th> -->
                 </tr>
               </thead>
               <tbody></tbody>
