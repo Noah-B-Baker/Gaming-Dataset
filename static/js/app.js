@@ -1,7 +1,8 @@
-const developperURL = "ttps://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/developper.csv?raw=true"
-const plateformURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/plateform.csv?raw=true"
-const publisherURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/publisher.csv?raw=true"
-const vgsalesURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/vgsales.csv?raw=true"
+const developperURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/developper.csv?raw=true";
+const plateformURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/plateform.csv?raw=true";
+const publisherURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/publisher.csv?raw=true";
+const vgsalesURL = "https://raw.githubusercontent.com/Noah-B-Baker/Gaming-Dataset/main/data/vgsales.csv?raw=true";
+const currentURL = vgsalesURL;
 
 // from data.js
 const tableData = data;
@@ -15,7 +16,7 @@ function buildTable(data) {
 
   // Next, loop through each object in the data
   // and append a row and cells for each value in the row
-  d3.csv(developperURL).forEach((dataRow) => {
+  data.forEach((dataRow) => {
     // Append a row to the table body
     const row = tbody.append("tr");
 
@@ -23,8 +24,8 @@ function buildTable(data) {
     // each value as a table cell (td)
     Object.values(dataRow).forEach((val) => {
       let cell = row.append("td");
-        cell.text(val);
-      }
+      cell.text(val);
+    }
     );
   });
 }
@@ -53,7 +54,16 @@ function handleClick() {
 d3.selectAll("#filter-btn").on("click", handleClick);
 
 // Build the table when the page loads
-buildTable(tableData);
+// buildTable(tableData);
+
+d3.csv(currentURL).then(function (devData) {
+  console.log(devData)
+  buildTable(devData);
+});
+
+
+
+
 // https://github.com/Zernach/Plotly_D3_Data_Visualizations
 // // FUNCTION #3 of 4
 // function optionChanged(UID) {
