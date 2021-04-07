@@ -62,14 +62,10 @@ d3.csv(currentURL).then(function (devData) {
 });
 
 
-
-
-// https://github.com/Zernach/Plotly_D3_Data_Visualizations
 // // FUNCTION #3 of 4
-// function optionChanged(UID) {
-//     buildCharts(UID);
-//     populateDemoInfo(UID);
-// }
+function optionChanged(option) {
+  buildTable(option);
+}
 
 // // FUNCTION #4 of 4
 // function initDashboard() {
